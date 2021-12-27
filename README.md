@@ -4,4 +4,4 @@ This repo contains some of my django admin customization personal practice files
 
 
 ## Contact Me
-[Abdullahil Ashik Md. Arefin](linkedin.com/in/abdullahil-ashik-arefin-225802165)
+[Abdullahil Ashik Md. Arefin](https://linkedin.com/in/abdullahil-ashik-arefin-225802165)
