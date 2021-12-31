@@ -3,7 +3,7 @@ from django.utils.text import slugify
 
 class JobCategory(models.Model):
     title = models.CharField(max_length=250)
-    slug = models.SlugField(max_length=250)    
+    slug = models.SlugField(max_length=250, blank=True)    
 
 
     def save(self,*args,**kwargs):
@@ -14,6 +14,9 @@ class JobCategory(models.Model):
     
     def __str__(self):
         return self.title
+    
+    class Meta:
+        verbose_name_plural = 'Job Categories'
 
 class Location(models.Model):
     title = models.CharField(max_length=250)
@@ -40,3 +43,6 @@ class Job(models.Model):
 
     def __str__(self):
         return self.title
+    
+    class Meta:
+        verbose_name_plural = 'All Jobs'
