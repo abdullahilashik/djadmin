@@ -1,0 +1,48 @@
+[
+    {"model":"djadmin.job","pk":1,
+        "fields":{
+            "title":"Job Sample 1",
+            "slug":"job-sample-1",
+            "job_category": 1,
+            "min_salary": 20000,
+            "max_salary": 30000,
+            "location": [7]
+        }
+    },
+    {
+        "model":"djadmin.job",
+        "pk":2,
+        "fields":{
+            "title":"Job Sample 2",
+            "slug":"job-sample-2",
+            "job_category": 1,
+            "min_salary": 20000,
+            "max_salary": 30000,
+            "location": [7]
+        }
+    },
+    {
+        "model":"djadmin.job",
+        "pk":3,
+        "fields":{
+            "title":"Job Sample 3",
+            "slug":"job-sample-3",
+            "job_category": 2,
+            "min_salary": 20000,
+            "max_salary": 30000,
+            "location": [7]
+        }
+    },
+    {
+        "model":"djadmin.job",
+        "pk":4,
+        "fields":{
+            "title":"Job Sample 3",
+            "slug":"job-sample-3",
+            "job_category": 2,
+            "min_salary": 20000,
+            "max_salary": 30000,
+            "location": [7]
+        }
+    }
+]

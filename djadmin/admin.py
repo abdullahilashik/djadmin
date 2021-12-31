@@ -2,6 +2,12 @@ from django.contrib import admin
 from .models import JobCategory, Job
 from django.http import HttpResponse
 import csv
+from django.urls import path
+from django.shortcuts import render, redirect
+from django import forms
+
+class CSVCategoryForm(forms.Form):
+    file = forms.FileField()    
 
 @admin.register(Job)
 class JobAdmin(admin.ModelAdmin):
@@ -10,6 +16,7 @@ class JobAdmin(admin.ModelAdmin):
 @admin.register(JobCategory)
 class JobCategoryAdmin(admin.ModelAdmin):
     actions = ['delete_category','export_as_csv']
+    change_list_template = 'admin/change_list.html'
 
     def delete_category(self, request, queryset):
         queryset.delete()
@@ -25,6 +32,26 @@ class JobCategoryAdmin(admin.ModelAdmin):
         self.message_user = 'CSV exported!'
 
         return response
+    
+    def import_csv(self, requests):
+        if requests.method == 'POST':
+            file = requests.FILES['file']
+            csvreader = csv.reader(file)
+            for row in csvreader:
+                print(row)
+        form = CSVCategoryForm()
+        context = {
+            'form': form
+        }
+        return render(requests, 'admin/category-import.html', context)
+
+    def get_urls(self):
+        urls = super().get_urls()
+        myurls = [
+            path('import-csv/', self.import_csv),
+        ]
+        return myurls + urls
+        
 
     
     export_as_csv.short_description = 'Export Selected'

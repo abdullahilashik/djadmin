@@ -1,0 +1,9 @@
+[
+    {"model":"djadmin.location","pk":1,"fields":{"title":"Dhaka"}},
+    {"model":"djadmin.location","pk":2,"fields":{"title":"Rajshahi"}},
+    {"model":"djadmin.location","pk":3,"fields":{"title":"Khulna"}},
+    {"model":"djadmin.location","pk":4,"fields":{"title":"Chittagong"}},
+    {"model":"djadmin.location","pk":5,"fields":{"title":"Sylhet"}},
+    {"model":"djadmin.location","pk":6,"fields":{"title":"Barishal"}},
+    {"model":"djadmin.location","pk":7,"fields":{"title":"All"}}    
+]
