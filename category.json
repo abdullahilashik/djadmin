@@ -1,0 +1,58 @@
+[
+    {
+        "model": "djadmin.jobcategory",
+        "pk": 1,
+        "fields": {
+            "title": "Education",
+            "slug": "education"
+        }
+    },
+    {
+        "model": "djadmin.jobcategory",
+        "pk": 2,
+        "fields": {
+            "title": "Garments",
+            "slug": "garments"
+        }
+    },
+    {
+        "model": "djadmin.jobcategory",
+        "pk": 3,
+        "fields": {
+            "title": "IT & Telecommunication",
+            "slug": "it-telecom"
+        }
+    },
+    {
+        "model": "djadmin.jobcategory",
+        "pk": 4,
+        "fields": {
+            "title": "Government",
+            "slug": "government"
+        }
+    },
+    {
+        "model": "djadmin.jobcategory",
+        "pk": 5,
+        "fields": {
+            "title": "Construction & Development",
+            "slug": "construction-development"
+        }
+    },
+    {
+        "model": "djadmin.jobcategory",
+        "pk": 6,
+        "fields": {
+            "title": "Driver",
+            "slug": "drivers"
+        }
+    },
+    {
+        "model": "djadmin.jobcategory",
+        "pk": 7,
+        "fields": {
+            "title": "Medical & Healthcare",
+            "slug": "medical-healthcare"
+        }
+    }
+]
