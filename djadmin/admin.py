@@ -5,6 +5,7 @@ import csv
 from django.urls import path
 from django.shortcuts import render, redirect
 from django import forms
+from openpyxl import load_workbook
 
 class CSVCategoryForm(forms.Form):
     file = forms.FileField()    
@@ -36,9 +37,18 @@ class JobCategoryAdmin(admin.ModelAdmin):
     def import_csv(self, requests):
         if requests.method == 'POST':
             file = requests.FILES['file']
-            csvreader = csv.reader(file)
-            for row in csvreader:
-                print(row)
+            excel = load_workbook(filename=file.file)
+            sheet = excel.active
+            
+            for item in sheet.iter_rows(min_row=2):
+                data = [i.value for i in item]
+                JobCategory.objects.update_or_create(
+                    id=data[0],
+                    title=data[1],
+                    slug=data[2]
+                )
+            
+            
         form = CSVCategoryForm()
         context = {
             'form': form
